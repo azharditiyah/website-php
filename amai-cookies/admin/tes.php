@@ -1,0 +1,3 @@
+<?php
+echo "HALAMAN ADMIN BERHASIL DIBUKA!";
+?>

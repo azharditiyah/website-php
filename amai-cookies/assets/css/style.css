@@ -1,0 +1,969 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fffdf8;
+    color: #40332d;
+}
+
+header {
+    background: #ffffff;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee8df;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #604332;
+}
+
+nav a {
+    text-decoration: none;
+    color: #55483f;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.hero {
+    background: #f2e9dd;
+    padding: 65px 7%;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+    color: #604332;
+}
+
+.hero p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.hero a {
+    display: inline-block;
+    background: #70503c;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.container {
+    padding: 45px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    color: #604332;
+    margin-bottom: 10px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #eee8df;
+}
+
+.product-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    margin-bottom: 8px;
+}
+
+.price {
+    color: #a16d46;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-info p {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.detail-btn {
+    display: block;
+    background: #70503c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+footer {
+    background: #40332d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero {
+        padding: 45px 6%;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .container {
+        padding: 35px 5%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .product-card img {
+        height: 150px;
+    }
+
+    .product-info {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+}
+/* HALAMAN DETAIL PRODUK */
+.detail-produk {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.gambar-detail {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+}
+
+.info-detail {
+    line-height: 1.8;
+}
+
+.info-detail input {
+    padding: 10px;
+    width: 80px;
+    margin: 10px;
+}
+
+/* HALAMAN KERANJANG */
+.pesan-keranjang {
+    background: #f5eadc;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.keranjang-kosong {
+    text-align: center;
+    padding: 40px 15px;
+}
+
+.tabel-keranjang {
+    width: 100%;
+    overflow-x: auto;
+    margin: 25px 0;
+}
+
+.tabel-keranjang table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.tabel-keranjang th,
+.tabel-keranjang td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.tabel-keranjang img {
+    display: block;
+    margin: 0 auto 8px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.tabel-keranjang input {
+    width: 65px;
+    padding: 8px;
+}
+
+.tabel-keranjang button {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.total-keranjang {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f9f3eb;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .detail-produk {
+        grid-template-columns: 1fr;
+    }
+
+    .gambar-detail {
+        max-width: 100%;
+    }
+}
+/* HALAMAN CHECKOUT */
+.checkout {
+    max-width: 850px;
+    margin: 40px auto;
+}
+
+.checkout-box {
+    background: #fffaf4;
+    padding: 25px;
+    border-radius: 14px;
+    margin: 25px 0;
+    border: 1px solid #eadcc9;
+}
+
+.checkout-box h3 {
+    margin-bottom: 15px;
+}
+
+.checkout-box label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.checkout-box input,
+.checkout-box textarea,
+.checkout-box select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d8c7b5;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.checkout-box button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background: #795548;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.catatan-pembayaran {
+    font-size: 13px;
+    color: #795548;
+    margin-top: 12px;
+}
+
+@media (max-width: 600px) {
+    .checkout-box {
+        padding: 16px;
+    }
+}
+/* PERBAIKAN FORM CHECKOUT */
+.checkout-box label {
+    display: block !important;
+    margin-top: 16px;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+.checkout-box input,
+.checkout-box textarea,
+.checkout-box select {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #d8c7b5;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background: white;
+}
+
+.checkout-box textarea {
+    resize: vertical;
+}
+
+.checkout-box button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background: #795548;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+/* =================================
+   SWEET PASTEL CHECKOUT - AMAI COOKIES
+================================= */
+
+.checkout {
+    max-width: 850px;
+    margin: 45px auto;
+    padding: 20px;
+}
+
+.checkout > h2 {
+    text-align: center;
+    color: #805747;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.checkout > p {
+    text-align: center;
+    color: #9B8175;
+    margin-bottom: 30px;
+}
+
+/* Kartu checkout */
+.checkout-box {
+    background: #FFF9F3;
+    border: 1px solid #F2DED3;
+    border-radius: 22px;
+    padding: 28px;
+    margin: 22px 0;
+    box-shadow: 0 6px 20px rgba(150, 105, 85, 0.08);
+}
+
+/* Judul bagian */
+.checkout-box h3 {
+    color: #805747;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+/* Ringkasan belanja */
+.checkout-box p {
+    color: #806B60;
+    line-height: 1.8;
+}
+
+/* Label formulir */
+.checkout-box label {
+    display: block;
+    color: #805747;
+    font-weight: 600;
+    margin: 18px 0 8px;
+}
+
+/* Kotak input */
+.checkout-box input,
+.checkout-box textarea,
+.checkout-box select {
+    display: block;
+    width: 100%;
+    padding: 13px 15px;
+    border: 1.5px solid #EBD6CC;
+    border-radius: 12px;
+    background: #FFFFFF;
+    color: #604B41;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.2s;
+}
+
+.checkout-box input:focus,
+.checkout-box textarea:focus,
+.checkout-box select:focus {
+    border-color: #D99DA9;
+    box-shadow: 0 0 0 3px rgba(217, 157, 169, 0.15);
+}
+
+.checkout-box textarea {
+    resize: vertical;
+}
+
+/* Tombol buat pesanan */
+.checkout-box button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 30px;
+    background: #A87562;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.checkout-box button:hover {
+    background: #805747;
+    transform: translateY(-2px);
+}
+
+/* Catatan pembayaran */
+.catatan-pembayaran {
+    background: #FCECEF;
+    color: #986D76;
+    padding: 13px;
+    border-radius: 12px;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+/* Pesan keranjang */
+.pesan-keranjang {
+    background: #FFF0E8;
+    color: #805747;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+/* Tampilan pesanan berhasil */
+.checkout-box a.detail-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 13px 22px;
+    background: #A87562;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    .checkout {
+        padding: 14px;
+        margin: 25px auto;
+    }
+
+    .checkout > h2 {
+        font-size: 24px;
+    }
+
+    .checkout-box {
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .checkout-box h3 {
+        font-size: 18px;
+    }
+}
+/* MENU NAVIGASI AMAI COOKIES */
+.menu-utama {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 18px 15px;
+    background: #fff0e8;
+    border-bottom: 1px solid #f0ddd2;
+}
+
+.menu-utama a {
+    color: #805747;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu-utama a:hover {
+    color: #c58b76;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    .menu-utama {
+        gap: 15px;
+        padding: 15px 10px;
+    }
+
+    .menu-utama a {
+        font-size: 12px;
+    }
+}
+/* FORMULIR ULASAN AMAI COOKIES */
+
+.bagian-ulasan {
+    margin: 40px 0;
+    padding: 25px;
+    background: #fff9f3;
+    border: 1px solid #f2ded3;
+    border-radius: 18px;
+}
+
+.bagian-ulasan h2,
+.bagian-ulasan h3 {
+    color: #805747;
+    margin-bottom: 18px;
+}
+
+.form-ulasan {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form-ulasan label {
+    color: #805747;
+    font-weight: bold;
+}
+
+.form-ulasan input,
+.form-ulasan select,
+.form-ulasan textarea {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #e5cfc3;
+    border-radius: 10px;
+    background: white;
+    color: #604b41;
+    font-size: 15px;
+    pointer-events: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.form-ulasan textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-ulasan button {
+    padding: 14px;
+    border: none;
+    border-radius: 25px;
+    background: #a87562;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* KARTU ULASAN PELANGGAN */
+
+.kartu-ulasan {
+    background: #ffffff;
+    border: 1px solid #f2ded3;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 18px 0;
+    box-shadow: 0 4px 12px rgba(150, 105, 85, 0.08);
+}
+
+.kartu-ulasan h3 {
+    color: #805747;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.kartu-ulasan .bintang {
+    color: #e5aa45;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.kartu-ulasan p {
+    color: #806b60;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.kartu-ulasan small {
+    color: #b49a8e;
+    font-size: 12px;
+}
+
+/* JUDUL ULASAN */
+
+.bagian-ulasan h2 {
+    font-size: 25px;
+    margin-bottom: 22px;
+}
+
+/* FORMULIR ULASAN */
+
+.form-ulasan {
+    background: #fff0e8;
+    padding: 22px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.form-ulasan button:hover {
+    background: #805747;
+}
+/* =====================================
+   REDESIGN HOMEPAGE - AMAI COOKIES
+===================================== */
+
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 20px 7%;
+    background: rgba(255, 253, 248, 0.97);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 3px 15px rgba(96, 67, 50, 0.05);
+}
+
+.logo {
+    font-size: 27px;
+    letter-spacing: -1px;
+    color: #805747;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d18e9c;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 105px 7%;
+    background:
+        radial-gradient(circle at 10% 20%, #f8dfe2 0, transparent 25%),
+        radial-gradient(circle at 90% 80%, #eed9c9 0, transparent 30%),
+        linear-gradient(135deg, #fff3ed, #f5e8df, #f9edef);
+}
+
+.hero h1 {
+    max-width: 850px;
+    margin: 0 auto 20px;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+    color: #69483f;
+}
+
+.hero p {
+    max-width: 900px;
+    margin: 0 auto 28px;
+    color: #806b60;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.hero a {
+    padding: 15px 32px;
+    border-radius: 30px;
+    background: #a87562;
+    box-shadow: 0 6px 15px rgba(168, 117, 98, 0.2);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero a:hover {
+    background: #805747;
+    transform: translateY(-3px);
+}
+
+/* JUDUL PRODUK */
+.container {
+    padding-top: 65px;
+    padding-bottom: 70px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    color: #805747;
+}
+
+.section-title p {
+    color: #9b8175;
+    line-height: 1.8;
+}
+
+/* KARTU PRODUK */
+.products {
+    gap: 25px;
+}
+
+.product-card {
+    border-radius: 18px;
+    border: 1px solid #f0e3dc;
+    box-shadow: 0 5px 20px rgba(96, 67, 50, 0.05);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(96, 67, 50, 0.12);
+}
+
+.product-card img {
+    height: 230px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 18px;
+}
+
+.product-info h3 {
+    color: #69483f;
+    font-size: 18px;
+}
+
+.product-info p {
+    color: #8c796f;
+}
+
+.price {
+    color: #a87562;
+    font-size: 18px;
+}
+
+.detail-btn {
+    background: #a87562;
+    border-radius: 25px;
+    padding: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.detail-btn:hover {
+    background: #805747;
+}
+
+/* FOOTER */
+footer {
+    background: #60483f;
+    padding: 35px 20px;
+    line-height: 1.8;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 768px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 75px 6%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .section-title h2 {
+        font-size: 25px;
+    }
+
+    .product-card img {
+        height: 170px;
+    }
+}
+
+@media (max-width: 400px) {
+    .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .product-card img {
+        height: 135px;
+    }
+
+    .product-info {
+        padding: 10px;
+    }
+
+    .product-info h3 {
+        font-size: 15px;
+    }
+
+    .product-info p {
+        font-size: 12px;
+    }
+}
+/* HERO BANNER DENGAN FOTO COOKIES */
+
+.hero {
+    padding: 65px 7%;
+    background:
+        radial-gradient(circle at 10% 20%, #f8dfe2 0, transparent 25%),
+        linear-gradient(135deg, #fff3ed, #f5e8df, #f9edef);
+}
+
+.hero-content {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 50px;
+    text-align: left;
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.hero-label {
+    display: inline-block;
+    color: #b77e83;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero-text h1 {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    max-width: 480px;
+    margin: 0 0 25px;
+    line-height: 1.8;
+}
+
+.hero-text a {
+    display: inline-block;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 430px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 45% 45% 25px 25px;
+    box-shadow: 0 15px 35px rgba(96, 67, 50, 0.15);
+}
+
+/* TAMPILAN HP */
+@media (max-width: 768px) {
+    .hero {
+        padding: 45px 6%;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text p {
+        margin: 0 auto 25px;
+    }
+
+    .hero-image img {
+        max-width: 350px;
+        height: 270px;
+    }
+}
